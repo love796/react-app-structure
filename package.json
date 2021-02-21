@@ -1,20 +1,26 @@
 {
-  "name": "react-folder-structure",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-app-structure",
+  "version": "1.0.0",
+  "description": "Folder structure and development setup for react app.",
+  "license": "MIT",
+  "private": false,
+  "author": {
+    "name": "Lovepreet Thind",
+    "email": "slovepreet796@gmail.com"
+  },
+  "homepage": "./",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.3",
     "workbox-broadcast-update": "^5.1.3",
     "workbox-cacheable-response": "^5.1.3",
@@ -28,16 +34,28 @@
     "workbox-strategies": "^5.1.3",
     "workbox-streams": "^5.1.3"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.2.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx} --quiet",
+    "lint-fix": "eslint src/**/*.{js,jsx,ts,tsx} --quiet --fix"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
